@@ -236,6 +236,18 @@ export default function Home() {
               role: "Business & Financial Analyst",
               company: "Leidos | Reston, Virginia",
               url: "https://www.leidos.com",
+              technologies: [
+                "Python",
+                "SQL",
+                "Power BI",
+                "Excel",
+                "Data Analysis",
+                "Dashboard Development",
+                "KPI Reporting",
+                "Forecasting",
+                "Financial Analysis",
+                "Business Intelligence",
+              ],
               bullets: [
                 "Developed and maintained financial reports, dashboards, and key performance metrics using Excel, Power BI, and data analysis techniques, enabling stakeholders to monitor project performance, budgets, and strategic objectives.",
                 "Analyzed operational and financial data to identify trends, support forecasting efforts, and provide data-driven recommendations that improved decision-making across cross-functional teams.",
@@ -249,6 +261,14 @@ export default function Home() {
               role: "Product Analyst",
               company: "AstraZeneca | Frederick, MD",
               url: "https://www.astrazeneca.com",
+              technologies: [
+                "SQL",
+                "Power BI",
+                "Excel",
+                "Data Validation",
+                "KPI Reporting",
+                "Root Cause Analysis",
+              ],
               bullets: [
                 "Analyzed and validated production and quality data using SQL, Excel, and Power BI, ensuring data accuracy and delivering actionable insights to support operational decision-making.",
                 "Developed and monitored performance metrics across 3+ production lines, leveraging trend analysis and anomaly detection to support monthly KPIs and maintain 98%+ line uptime.",
@@ -261,6 +281,14 @@ export default function Home() {
               role: "Data Analyst Intern",
               company: "AstraZeneca | Frederick, MD",
               url: "https://www.astrazeneca.com",
+              technologies: [
+                "SQL",
+                "Power BI",
+                "SharePoint",
+                "Data Cleaning",
+                "Dashboard Development",
+                "Process Improvement",
+              ],
               bullets: [
                 "Led a data-driven tool replacement initiative by auditing 200+ handheld tools, structuring and analyzing data using SQL, and centralizing datasets through SharePoint to improve accessibility and reporting consistency.",
                 "Designed and developed interactive Power BI dashboards to track replacement status and key metrics, increasing tracking efficiency by 40% and enhancing visibility for stakeholders.",
@@ -295,6 +323,17 @@ export default function Home() {
                   <li key={bullet}>{bullet}</li>
                 ))}
               </ul>
+
+              <div className="flex flex-wrap gap-3 mt-6">
+                {job.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-4 py-2 rounded-full border border-gray-300 bg-gray-50 text-sm font-medium text-gray-700"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>
@@ -390,6 +429,14 @@ export default function Home() {
                 "Translated business and Figma requirements into a normalized 3NF SQL schema spanning 30+ tables and created documentation for scalable analytics and backend development.",
               github:
                 "https://github.com/asharma8924/Flikshop-iConsultancy",
+            },
+            {
+              title: "Stock Price Predictor",
+              tools: "Python • Machine Learning • Streamlit • Financial Data Analysis",
+              description:
+                "Built a machine learning stock prediction app using historical market data for major tickers including AAPL, MSFT, NVDA, AMZN, GOOGL, and SPY. Engineered features such as daily returns, moving averages, and volatility indicators, then trained a Random Forest model to predict stock price movement and display results through an interactive Streamlit interface.",
+              github:
+                "https://github.com/asharma8924/Stock-Price-Predictor",
             },
           ].map((project) => (
             <motion.div
